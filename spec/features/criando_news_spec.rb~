@@ -11,9 +11,9 @@ RSpec.feature "Creating News" do
 		fill_in "Body", with:"lorem ipsum"
 
 		
-		click_button "Criar noticia"
+		click_button "Publicar"
 
 		expect(page).to have_content ("Noticia criada com sucesso")
-		expect(page.current_path).to eq(news_path)
+		expect(page.current_path).to eq(article_path)
 	end
 end

@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :news
+ 
+  resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root to: 'news#index'
+   root to: 'articles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
   #
   #     collection do
   #       get 'sold'
-  #     end
+#     end
   #   end
 
   # Example resource route with sub-resources:

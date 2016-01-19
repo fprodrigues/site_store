@@ -1,0 +1,14 @@
+class NoticiasController < ApplicationController
+  
+	def index
+		@noticium = Noticium.all
+  	end
+
+	def new
+		@noticium = Noticium.new
+	end
+
+	def create
+		
+	end
+end

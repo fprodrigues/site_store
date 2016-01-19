@@ -14,6 +14,6 @@ RSpec.feature "Creating News" do
 		click_button "Publicar"
 
 		expect(page).to have_content ("Noticia criada com sucesso")
-		expect(page.current_path).to eq(news_path)
+		expect(page.current_path).to eq(articles_path)
 	end
 end

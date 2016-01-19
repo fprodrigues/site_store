@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
- 	 def index
+ 	 
+	def index
 		@newss=News.all
   	end
 	
@@ -14,13 +15,14 @@ class NewsController < ApplicationController
 	def create
 		@news = News.new(news_params)
 		@news.save
-		flash[:success] = "Article has been created"
+		flash[:success] = "Noticia criada com sucesso"
+		redirect_to news_path
 	end
 	
 
 	private
 		def news_params 
-			params.require(:news).permit(:title, :body)			
+			params.require(:news).permit(:title, :body,:id)			
 		end
 	
 	
